@@ -13,7 +13,8 @@ def is_prime(num):
         if num % i == 0:
             return False
         i += 2
-        return True
+    return True
+
 
 def factory(num):
     """This factor function gets the factors of a number & prints them out"""
@@ -32,6 +33,7 @@ def factory(num):
                     print("{}={}*{}".format(num, int(num/i), i))
                     return
 
+
 def factors(filename):
     """read_file"""
     with open(filename, encoding="utf-8") as my_file:
@@ -39,5 +41,6 @@ def factors(filename):
             n = int(i)
             result = factory(n)
 
-            if __name__ == "__main__":
-                factors(argv[1])
+
+if __name__ == "__main__":
+    factors(argv[1])
